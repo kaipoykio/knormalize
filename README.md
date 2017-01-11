@@ -9,3 +9,8 @@ or sharpening techniques.
 knorm.sh
 
 Is an example of how to use knormalize.pl.
+
+Requirements:
+
+perl5
+imagemagick
