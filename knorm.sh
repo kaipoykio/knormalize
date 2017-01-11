@@ -12,4 +12,4 @@ KNORM=`cat /tmp/knorm.hist|./knormalize.pl`
 BLACK=${KNORM%,*}
 WHITE=${KNORM#*,}
 
-convert -strip -level ${BLACK}%,${WHITE}% $1 $1.knormed.jpg
+convert -strip -level ${BLACK}%,${WHITE}% $1 $1.knormed.tif
