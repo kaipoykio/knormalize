@@ -6,9 +6,10 @@ if [ "$1" == "" ] || [ ! -f "$1" ]; then
 	exit;
 fi
 
-convert $1 -depth 8 -format "%c" histogram:info:- > /tmp/knorm.hist
+#convert $1 -depth 8 -format "%c" histogram:info:- > /tmp/knorm.hist
 
-KNORM=`cat /tmp/knorm.hist|./knormalize.pl`
+KNORM=`convert $1 -depth 8 -format "%c" histogram:info:-|./knormalize.pl`
+#KNORM=`cat /tmp/knorm.hist|./knormalize.pl`
 BLACK=${KNORM%,*}
 WHITE=${KNORM#*,}
 
